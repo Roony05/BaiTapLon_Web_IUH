@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng ký & Đăng nhập</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <script src="../js/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div class="full-layer">
+      <header class="header">
+        <nav class="container navbar navbar-expand-lg navbar-dark">
+          <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <div class="logo_hamburger">
+              <a class="navbar-brand" href="../html/home.html">
+                <svg
+                  width="70"
+                  height="70"
+                  viewBox="0 0 150 150"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="75" cy="75" r="70" stroke="#ffffff" stroke-width="5" fill="none" />
+                  <line
+                    x1="75"
+                    y1="75"
+                    x2="75"
+                    y2="35"
+                    stroke="#ffffff"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="75"
+                    y1="75"
+                    x2="110"
+                    y2="75"
+                    stroke="#ffffff"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <text
+                    x="75"
+                    y="115"
+                    font-family="Raleway"
+                    font-size="30"
+                    fill="#ffffff"
+                    text-anchor="middle"
+                    dominant-baseline="middle"
+                  >
+                    RB
+                  </text>
+                </svg>
+              </a>
+              <!-- Hamburger icon for mobile view -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+
+            <!-- Center elements: Menu dropdown and search -->
+            <div class="d-flex align-items-center">
+              <!-- Menu Dropdown -->
+              <div class="dropdown me-3">
+                <button
+                  class="btn btn-dark dropdown-toggle"
+                  type="button"
+                  id="menuDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  MENU
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuDropdown">
+                  <li><a class="dropdown-item" href="../html/home.html">TRANG CHỦ</a></li>
+                  <li><a class="dropdown-item" href="../html/nav-detail.html?id=RB1">NAM</a></li>
+                  <li><a class="dropdown-item" href="../html/nav-detail.html?id=RB5">NỮ</a></li>
+                  <li>
+                    <a class="dropdown-item" href="../html/nav-detail.html?id=RB9">CAO CẤP</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../html/nav-detail.html?id=RB13">CỔ ĐIỂN</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex">
+                <div class="btn btn-dark about-btn me-3">
+                  <a href="../html/about-us.html" class="text-decoration-none text-white"
+                    >ABOUT US</a
+                  >
+                </div>
+              </div>
+              <!-- Search input and button -->
+              <div class="search-container d-flex">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Tìm kiếm"
+                  aria-label="Search"
+                />
+                <button class="search-btn btn" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Profile icon -->
+            <div class="profile-icon">
+              <a href="../html/register.html">
+                <svg
+                  style="color: white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Mobile navigation - hidden on desktop -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <!-- Add TRANG CHỦ link for mobile -->
+
+            <li class="nav-item">
+              <a href="../html/register.html" class="nav-link">
+                <svg
+                  style="color: white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/home.html">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/about-us.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/nav-detail.html?id=RB1">NAM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/nav-detail.html?id=RB5">NỮ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/nav-detail.html?id=RB9">CAO CẤP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/nav-detail.html?id=RB13">CỔ ĐIỂN</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Replace the existing welcome container with this improved version -->
+      <div class="welcome-section">
+        <div class="welcome-container">
+          <h2>Chào mừng bạn đến với thế giới đồng hồ!</h2>
+          <button
+            class="btn btn-primary m-2"
+            data-bs-toggle="modal"
+            data-bs-target="#registerModal"
+          >
+            Đăng ký
+          </button>
+          <button class="btn btn-success m-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Đăng nhập
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Đăng ký -->
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h5 class="modal-title">Đăng ký</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <input
+                type="text"
+                id="regUsername"
+                class="form-control mb-2"
+                placeholder="Tên đăng nhập"
+              />
+              <input
+                type="password"
+                id="regPassword"
+                class="form-control mb-2"
+                placeholder="Mật khẩu"
+              />
+              <div id="registerMessage" class="text-success mb-2"></div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" onclick="register()">Đăng ký</button>
+              <button
+                class="btn btn-link"
+                data-bs-dismiss="modal"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Đã có tài khoản?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Đăng nhập -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content p-3">
+            <div class="modal-header">
+              <h5 class="modal-title">Đăng nhập</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <input
+                type="text"
+                id="loginUsername"
+                class="form-control mb-2"
+                placeholder="Tên đăng nhập"
+              />
+              <input
+                type="password"
+                id="loginPassword"
+                class="form-control mb-2"
+                placeholder="Mật khẩu"
+              />
+              <p id="message" class="text-danger"></p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-success" onclick="login()">Đăng nhập</button>
+              <button
+                class="btn btn-link"
+                data-bs-dismiss="modal"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+              >
+                Chưa có tài khoản?
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer-container position-relative">
+        <div class="container">
+          <div class="icon-footer d-flex justify-content-start">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                /></svg
+            ></a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                /></svg
+            ></a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-tiktok"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+                /></svg
+            ></a>
+            <a href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-twitter"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"
+                /></svg
+            ></a>
+          </div>
+          <div
+            class="text-footer text-white d-flex justify-content-center py-4"
+            style="font-size: 1.2rem; font-weight: 700"
+          >
+            © Bản quyền thuộc về Võ Tấn Tài - Nguyễn Khả Luân | Shop RB
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/register.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
